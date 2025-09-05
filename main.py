@@ -107,6 +107,6 @@ def protected(authorization: str = Header(None)):
 
 if __name__ == "__main__":
     import uvicorn
-    print("Starting server on http://127.0.0.1:3001")
-    print("If you can't access it, try: http://localhost:3001")
-    uvicorn.run(app, host="127.0.0.1", port=3001, reload=False)
+    print("Starting server on http://127.0.0.1:3002")
+    print("If you can't access it, try: http://localhost:3002")
+    uvicorn.run(app, host="127.0.0.1", port=3002, reload=False)
