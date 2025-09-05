@@ -1,69 +1,40 @@
-# React + TypeScript + Vite
+##Todo app
 
-This template provides a minimal setup to get React working in Vite with HMR and some ESLint rules.
+A beginner-friendly full-stack authentication project using **FastAPI** and **React + TypeScript**. Users can register, log in, access protected content, and log out — all powered by JWT tokens and a real database.
 
-Currently, two official plugins are available:
+---
 
-- [@vitejs/plugin-react](https://github.com/vitejs/vite-plugin-react/blob/main/packages/plugin-react) uses [Babel](https://babeljs.io/) for Fast Refresh
-- [@vitejs/plugin-react-swc](https://github.com/vitejs/vite-plugin-react/blob/main/packages/plugin-react-swc) uses [SWC](https://swc.rs/) for Fast Refresh
+ TECH
 
-## Expanding the ESLint configuration
+- Backend: FastAPI, Python, SQLAlchemy, JWT
+- Frontend: React 18+, TypeScript, Axios, React Router
+- Database: SQLite (or PostgreSQL)
 
-If you are developing a production application, we recommend updating the configuration to enable type-aware lint rules:
 
-```js
-export default tseslint.config([
-  globalIgnores(['dist']),
-  {
-    files: ['**/*.{ts,tsx}'],
-    extends: [
-      // Other configs...
 
-      // Remove tseslint.configs.recommended and replace with this
-      ...tseslint.configs.recommendedTypeChecked,
-      // Alternatively, use this for stricter rules
-      ...tseslint.configs.strictTypeChecked,
-      // Optionally, add this for stylistic rules
-      ...tseslint.configs.stylisticTypeChecked,
+## FEATURES
 
-      // Other configs...
-    ],
-    languageOptions: {
-      parserOptions: {
-        project: ['./tsconfig.node.json', './tsconfig.app.json'],
-        tsconfigRootDir: import.meta.dirname,
-      },
-      // other options...
-    },
-  },
-])
-```
+- User registration and login
+- JWT-based authentication
+- Protected route access
+- Logout and token clearing
+- Loading states and error messages
+- Responsive design with minimal styling
 
-You can also install [eslint-plugin-react-x](https://github.com/Rel1cx/eslint-react/tree/main/packages/plugins/eslint-plugin-react-x) and [eslint-plugin-react-dom](https://github.com/Rel1cx/eslint-react/tree/main/packages/plugins/eslint-plugin-react-dom) for React-specific lint rules:
 
-```js
-// eslint.config.js
-import reactX from 'eslint-plugin-react-x'
-import reactDom from 'eslint-plugin-react-dom'
 
-export default tseslint.config([
-  globalIgnores(['dist']),
-  {
-    files: ['**/*.{ts,tsx}'],
-    extends: [
-      // Other configs...
-      // Enable lint rules for React
-      reactX.configs['recommended-typescript'],
-      // Enable lint rules for React DOM
-      reactDom.configs.recommended,
-    ],
-    languageOptions: {
-      parserOptions: {
-        project: ['./tsconfig.node.json', './tsconfig.app.json'],
-        tsconfigRootDir: import.meta.dirname,
-      },
-      // other options...
-    },
-  },
-])
-```
+ ##SETUP
+
+ BACKEND
+
+```bash
+cd backend
+python -m venv venv
+source venv/bin/activate  # Windows: .\venv\Scripts\activate
+pip install -r requirements.txt
+uvicorn main:app --reload
+
+FRONTEND
+cd frontend
+npm install
+npm start
