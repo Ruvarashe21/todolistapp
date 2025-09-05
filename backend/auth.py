@@ -7,7 +7,7 @@ from backend.models import User
 # Secret key for JWT
 SECRET_KEY = "mySecret"
 
-# Password hashing setup
+# Password hashing 
 pwd_context = CryptContext(schemes=["bcrypt"], deprecated="auto")
 
 def hash_password(password: str):
