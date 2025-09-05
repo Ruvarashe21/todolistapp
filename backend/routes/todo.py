@@ -2,10 +2,10 @@
 # backend/routes/todo_routes.py
 from fastapi import APIRouter, Depends, HTTPException, Header
 from sqlalchemy.orm import Session
-from backend.database import SessionLocal
-from backend.models import Todo, User
-from backend.schema import TodoCreate, TodoUpdate
-from backend.auth import validate_token
+from database import SessionLocal
+from models import Todo, User
+from schema import TodoCreate, TodoUpdate
+from auth import validate_token
 
 router = APIRouter()
 

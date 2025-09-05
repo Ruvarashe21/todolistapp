@@ -2,7 +2,7 @@ import jwt
 from datetime import datetime, timedelta, timezone
 from passlib.context import CryptContext
 from sqlalchemy.orm import Session
-from backend.models import User
+from models import User
 
 # Secret key for JWT
 SECRET_KEY = "mySecret"
