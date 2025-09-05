@@ -8,7 +8,6 @@ from backend.auth import register_user, login_user, validate_token
 import logging
 import datetime
 
-# Configure logging
 logging.basicConfig(
     level=logging.INFO,
     format='%(asctime)s - %(name)s - %(levelname)s - %(message)s',
@@ -19,13 +18,10 @@ logging.basicConfig(
 )
 logger = logging.getLogger(__name__)
 
-# Confirm DB connection
 print("Connected to:", database.engine.url)
 
-# Create FastAPI app
 app = FastAPI()
 
-# Middleware for request logging
 @app.middleware("http")
 async def log_requests(request: Request, call_next):
     start_time = datetime.datetime.now()
@@ -56,7 +52,7 @@ app.add_middleware(
 models.Base.metadata.create_all(bind=database.engine)
 app.include_router(todo.router)
 
-# Dependency to get DB session
+
 def get_db():
     db = database.SessionLocal()
     try:
@@ -68,8 +64,7 @@ def get_db():
 class UserData(BaseModel):
     email: str
     password: str
-
-# Root route for testing
+    
 @app.get("/")
 def root():
     return {"message": "Todo API is running"}
