@@ -1,4 +1,4 @@
-##Todo app
+Todo app
 
 A beginner-friendly full-stack authentication project using **FastAPI** and **React + TypeScript**. Users can register, log in, access protected content, and log out — all powered by JWT tokens and a real database.
 
@@ -12,7 +12,7 @@ A beginner-friendly full-stack authentication project using **FastAPI** and **Re
 
 
 
-## FEATURES
+sSFEATURES
 
 - User registration and login
 - JWT-based authentication
@@ -23,7 +23,7 @@ A beginner-friendly full-stack authentication project using **FastAPI** and **Re
 
 
 
- ##SETUP
+SETUP
 
  BACKEND
 
