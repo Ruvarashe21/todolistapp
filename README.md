@@ -38,3 +38,19 @@ FRONTEND
 cd frontend
 npm install
 npm start
+
+HOW TO RUN THE APP LOCALLY
+
+1. Clone the Repository
+
+```bash
+git clone https://github.com/Ruvarashe21/todolistapp.git
+cd todolistapp
+
+Test the App
+- Visit http://localhost:3000
+- Register a new user
+- Log in and access the protected page
+- Log out and try accessing the protected page again — it should redirect to login
+
+
