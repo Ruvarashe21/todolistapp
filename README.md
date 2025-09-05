@@ -32,12 +32,12 @@ cd backend
 python -m venv venv
 source venv/bin/activate  # Windows: .\venv\Scripts\activate
 pip install -r requirements.txt
-uvicorn main:app --reload
+python main.py
 
 FRONTEND
 cd frontend
 npm install
-npm start
+npm run dev
 
 HOW TO RUN THE APP LOCALLY
 
