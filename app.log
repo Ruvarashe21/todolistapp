@@ -262,3 +262,25 @@ AttributeError: module 'bcrypt' has no attribute '__about__'
 2025-09-05 05:46:45,263 - __main__ - INFO - Login attempt for: ruvarashemakaure@gmail.com
 2025-09-05 05:46:45,630 - __main__ - INFO - Login successful for: ruvarashemakaure@gmail.com
 2025-09-05 05:46:45,631 - __main__ - INFO - Response: 200 - Time: 0:00:00.377127
+2025-09-05 06:56:39,638 - __main__ - INFO - Request: GET http://localhost:3001/
+2025-09-05 06:56:39,650 - __main__ - INFO - Response: 200 - Time: 0:00:00.012485
+2025-09-05 06:56:39,852 - __main__ - INFO - Request: GET http://localhost:3001/favicon.ico
+2025-09-05 06:56:39,853 - __main__ - INFO - Response: 404 - Time: 0:00:00.000574
+2025-09-05 07:02:58,671 - __main__ - INFO - Request: POST http://localhost:3001/login
+2025-09-05 07:02:58,812 - __main__ - INFO - Login attempt for: ruvarashemakaure@gmail.com
+2025-09-05 07:02:59,016 - passlib.handlers.bcrypt - WARNING - (trapped) error reading bcrypt version
+Traceback (most recent call last):
+  File "C:\Users\muram\PycharmProjects\original2\.venv\Lib\site-packages\passlib\handlers\bcrypt.py", line 620, in _load_backend_mixin
+    version = _bcrypt.__about__.__version__
+              ^^^^^^^^^^^^^^^^^
+AttributeError: module 'bcrypt' has no attribute '__about__'
+2025-09-05 07:02:59,602 - __main__ - INFO - Login successful for: ruvarashemakaure@gmail.com
+2025-09-05 07:02:59,607 - __main__ - INFO - Response: 200 - Time: 0:00:00.938051
+2025-09-05 07:05:08,770 - __main__ - INFO - Request: POST http://localhost:3001/login
+2025-09-05 07:05:08,772 - __main__ - INFO - Login attempt for: ruvarashemakaure@gmail.com
+2025-09-05 07:05:09,049 - __main__ - INFO - Login successful for: ruvarashemakaure@gmail.com
+2025-09-05 07:05:09,050 - __main__ - INFO - Response: 200 - Time: 0:00:00.280678
+2025-09-05 07:06:48,305 - __main__ - INFO - Request: POST http://localhost:3001/register
+2025-09-05 07:06:48,307 - __main__ - INFO - Registration attempt for: ruvarashemakaure@gmail.com
+2025-09-05 07:06:48,308 - __main__ - WARNING - Registration failed - user exists: ruvarashemakaure@gmail.com
+2025-09-05 07:06:48,311 - __main__ - INFO - Response: 409 - Time: 0:00:00.006153
