@@ -2,9 +2,9 @@ from fastapi import FastAPI, HTTPException, Depends, Request, Header
 from fastapi.middleware.cors import CORSMiddleware
 from pydantic import BaseModel
 from sqlalchemy.orm import Session
-from backend import models, database, auth
-from backend.routes import todo
-from backend.auth import register_user, login_user, validate_token
+import models, database, auth
+from routes import todo
+from auth import register_user, login_user, validate_token
 import logging
 import datetime
 
