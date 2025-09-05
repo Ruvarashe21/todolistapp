@@ -69,7 +69,7 @@ class UserData(BaseModel):
 def root():
     return {"message": "Todo API is running"}
 
-# 🔐 Register route
+# register route
 @app.post("/register")
 def register(user_data: UserData, db: Session = Depends(get_db)):
     logger.info(f"Registration attempt for: {user_data.email}")
@@ -80,7 +80,7 @@ def register(user_data: UserData, db: Session = Depends(get_db)):
     logger.info(f"User registered successfully: {user_data.email}")
     return {"message": result}
 
-# 🔐 Login route
+#  Login route
 @app.post("/login")
 def login(user_data: UserData, db: Session = Depends(get_db)):
     logger.info(f"Login attempt for: {user_data.email}")
@@ -91,7 +91,7 @@ def login(user_data: UserData, db: Session = Depends(get_db)):
     logger.info(f"Login successful for: {user_data.email}")
     return {"token": token}
 
-# 🔐 Protected route
+#  Protected route
 @app.get("/protected")
 def protected(authorization: str = Header(None)):
     if not authorization or not authorization.startswith("Bearer "):
